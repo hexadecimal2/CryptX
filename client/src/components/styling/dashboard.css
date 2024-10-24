@@ -105,3 +105,68 @@
 .sparkline-chart {
   width: 100px; /* Sparkline chart width */
 }
+
+/* Styling for the crypto header to align the icon and name */
+.crypto-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crypto-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; /* Space between icon and name */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .top-cards-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+  }
+
+  .live-market-grid {
+    grid-template-columns: repeat(1, 1fr); /* One column on smaller screens */
+  }
+}
+
+/* Transactions Section */
+.transactions {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-info h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.transaction-info p {
+  font-size: 14px;
+  margin: 5px 0 0;
+  color: #3f51b5;
+}
+
+.transaction-details p {
+  font-size: 14px;
+  margin: 0;
+  text-align: right;
+}

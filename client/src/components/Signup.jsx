@@ -1,6 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import './styling/signup.css';
 
 const Signup = () => {
 
@@ -40,10 +41,16 @@ return(
     <>
     <Sidebar/>
     <div className="signup">
+        
+        <h1>Create Your CryptX Account Today!</h1>
+        
         <input type="text"  id="signUpName" placeholder="Name"/>
         <input type="text"  id="signUpEmail" placeholder="Email"/>
-        <input type="text"  id="signUpPassword" placeholder="Password"/>
+        <input type="password"  id="signUpPassword" placeholder="Password"/>
         <button onClick={() => handleClick()}> Sign Up </button>
+    
+        <p onClick={() => navigate('/login')}> Have an account? Log in here </p>
+
     </div>
     </>
 );

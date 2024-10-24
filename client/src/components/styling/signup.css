@@ -1,0 +1,75 @@
+/* Main container that includes the sidebar and the signup form */
+.main-container {
+    display: flex;
+}
+
+/* Sidebar styling as before */
+.sidebar {
+    height: 100vh;
+    width: 220px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: fixed;
+}
+
+/* Styling for the signup section next to the sidebar */
+.signup {
+    margin-left: 240px; /* Space for the sidebar */
+    padding: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.signup h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3f51b5; /* Match the sidebar accent color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.signup input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup button {
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.signup button:hover {
+    background-color: #303f9f;
+}
+
+/* Style for the paragraph text that includes the login link */
+.signup p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the login link */
+.signup p:hover {
+    color: #3f51b5; /* Same color as the button and heading for consistency */
+    text-decoration: underline; /* Underline to make it more link-like */
+}

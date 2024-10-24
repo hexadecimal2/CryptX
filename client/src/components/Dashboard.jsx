@@ -19,6 +19,12 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 const Dashboard = () => {
   const [btcPrices, setBTCprices] = useState([]);
   const [liveMarketData, setLiveMarketData] = useState([]);
+  const [transactions, setTransactions] = useState([
+    { id: 1, name: 'Ethereum', amount: '$24,102', type: 'Received', timestamp: 'Today, 19:30' },
+    { id: 2, name: 'Bitcoin', amount: '$4,157', type: 'Buy', timestamp: 'Today, 14:32' },
+    { id: 3, name: 'Bitcoin', amount: '$64,784', type: 'Buy', timestamp: 'Today, 13:50' },
+    { id: 4, name: 'Litecoin', amount: '$14,265', type: 'Buy', timestamp: 'Today, 09:38' },
+  ]);
 
   const fetchDashboardData = async () => {
     try {
@@ -68,7 +74,10 @@ const Dashboard = () => {
           {filteredCoins.map((coin) => (
             <div className="crypto-card" key={coin.id}>
               <div className="card-content">
-                <h3>{coin.name}</h3>
+                <div className="crypto-header">
+                  <img src={coin.image} alt={`${coin.name} logo`} className="crypto-icon" />
+                  <h3>{coin.name}</h3>
+                </div>
                 <h2>${coin.current_price.toLocaleString()}</h2>
                 <p className={`percentage ${coin.price_change_percentage_24h > 0 ? 'positive' : 'negative'}`}>
                   {coin.price_change_percentage_24h.toFixed(2)}%
@@ -91,7 +100,10 @@ const Dashboard = () => {
             {filteredCoins.map((coin) => (
               <div className="live-market-item" key={coin.id}>
                 <div className="live-market-info">
-                  <h4>{coin.name}</h4>
+                  <div className="crypto-header">
+                    <img src={coin.image} alt={`${coin.name} logo`} className="crypto-icon" />
+                    <h4>{coin.name}</h4>
+                  </div>
                   <p>Price: ${coin.current_price.toLocaleString()}</p>
                   <p className={`percentage ${coin.price_change_percentage_24h > 0 ? 'positive' : 'negative'}`}>
                     Change: {coin.price_change_percentage_24h.toFixed(2)}%
@@ -101,6 +113,25 @@ const Dashboard = () => {
                   <Sparklines data={coin.sparkline_in_7d.price}>
                     <SparklinesLine color={coin.price_change_percentage_24h > 0 ? 'green' : 'red'} />
                   </Sparklines>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Transactions Section */}
+        <div className="transactions">
+          <h3>Transactions</h3>
+          <div className="transactions-list">
+            {transactions.map((transaction) => (
+              <div className="transaction-item" key={transaction.id}>
+                <div className="transaction-info">
+                  <h4>{transaction.name}</h4>
+                  <p>{transaction.amount}</p>
+                </div>
+                <div className="transaction-details">
+                  <p>{transaction.type}</p>
+                  <p>{transaction.timestamp}</p>
                 </div>
               </div>
             ))}
