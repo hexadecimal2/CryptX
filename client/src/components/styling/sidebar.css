@@ -1,14 +1,14 @@
-/* Styling for the sidebar */
+
 .sidebar {
-    height: 100vh; /* Full height */
-    width: 220px; /* Set sidebar width */
-    background-color: #f9f9f9; /* Light background */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 100vh; 
+    width: 220px; 
+    background-color: #f9f9f9; 
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0;
-    position: fixed; /* Sidebar stays fixed */
+    position: fixed; 
   }
   
   .sidebar-header {
@@ -28,7 +28,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    flex-grow: 1; /* Pushes footer to bottom */
+    flex-grow: 1; 
   }
   
   .sidebar-item {
@@ -43,7 +43,7 @@
   .sidebar-item svg {
     font-size: 18px;
     margin-right: 15px;
-    color: #3f51b5; /* Icon color */
+    color: #3f51b5; 
   }
   
   .sidebar-item span {
@@ -53,7 +53,7 @@
   
   .sidebar-item.active,
   .sidebar-item:hover {
-    background-color: #e0e7ff; /* Light hover color */
+    background-color: #e0e7ff; 
     color: #3f51b5;
   }
   
@@ -73,6 +73,6 @@
   }
   
   .sidebar-footer:hover {
-    color: #e53935; /* Red hover color for logout */
+    color: #e53935;
   }
   

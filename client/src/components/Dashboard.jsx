@@ -69,7 +69,7 @@ const Dashboard = () => {
         <Sidebar />
       </div>
       <div className="dashboard-content">
-        {/* Top cards for Bitcoin, Ethereum, Litecoin, and Cardano */}
+
         <div className="top-cards-container">
           {filteredCoins.map((coin) => (
             <div className="crypto-card" key={coin.id}>
@@ -87,13 +87,13 @@ const Dashboard = () => {
           ))}
         </div>
 
-        {/* BTC price graph */}
+    
         <div className="btc-chart-container">
           <h2>BTC Price Chart</h2>
           {btcPrices.length > 0 ? <Line data={btcChartData} /> : <p>Loading...</p>}
         </div>
 
-        {/* Live market section with sparklines */}
+   
         <div className="live-market">
           <h3>Live Market</h3>
           <div className="live-market-grid">
@@ -119,7 +119,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Transactions Section */}
+
         <div className="transactions">
           <h3>Transactions</h3>
           <div className="transactions-list">

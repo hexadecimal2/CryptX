@@ -1,9 +1,9 @@
-/* Main container that includes the sidebar and the signup form */
+
 .main-container {
     display: flex;
 }
 
-/* Sidebar styling as before */
+
 .sidebar {
     height: 100vh;
     width: 220px;
@@ -16,9 +16,9 @@
     position: fixed;
 }
 
-/* Styling for the signup section next to the sidebar */
+
 .signup {
-    margin-left: 240px; /* Space for the sidebar */
+    margin-left: 240px; 
     padding: 50px;
     flex-grow: 1;
     display: flex;
@@ -31,8 +31,8 @@
 .signup h1 {
     font-size: 2rem;
     font-weight: bold;
-    color: #3f51b5; /* Match the sidebar accent color */
-    margin-bottom: 20px; /* Space below the heading */
+    color: #3f51b5; 
+    margin-bottom: 20px; 
 }
 
 .signup input {
@@ -59,7 +59,7 @@
     background-color: #303f9f;
 }
 
-/* Style for the paragraph text that includes the login link */
+
 .signup p {
     margin-top: 20px;
     font-size: 1rem;
@@ -68,8 +68,8 @@
     transition: color 0.3s ease;
 }
 
-/* Hover effect for the login link */
+
 .signup p:hover {
-    color: #3f51b5; /* Same color as the button and heading for consistency */
-    text-decoration: underline; /* Underline to make it more link-like */
+    color: #3f51b5; 
+    text-decoration: underline; 
 }
