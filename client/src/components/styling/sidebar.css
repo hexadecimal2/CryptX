@@ -1,0 +1,78 @@
+/* Styling for the sidebar */
+.sidebar {
+    height: 100vh; /* Full height */
+    width: 220px; /* Set sidebar width */
+    background-color: #f9f9f9; /* Light background */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: fixed; /* Sidebar stays fixed */
+  }
+  
+  .sidebar-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3f51b5;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: #3f51b5;
+    font-weight: 700;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Pushes footer to bottom */
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-item svg {
+    font-size: 18px;
+    margin-right: 15px;
+    color: #3f51b5; /* Icon color */
+  }
+  
+  .sidebar-item span {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .sidebar-item.active,
+  .sidebar-item:hover {
+    background-color: #e0e7ff; /* Light hover color */
+    color: #3f51b5;
+  }
+  
+  .sidebar-footer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-footer svg {
+    font-size: 18px;
+    margin-right: 15px;
+    color: #3f51b5;
+  }
+  
+  .sidebar-footer:hover {
+    color: #e53935; /* Red hover color for logout */
+  }
+  
